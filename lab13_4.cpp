@@ -3,11 +3,8 @@
 using namespace std;
 
 template <class currentType>
-void mySwap(currentType x , currentType y){
-	currentType i = x;
-	x = y;
-	y = i;
-}
+void mySwap(currentType &x , currentType &y);
+	
 
 int main(){
 	int x, y;
@@ -37,4 +34,10 @@ int main(){
 	return 0;
 }
 
+template <class currentType>
+void mySwap(currentType &x , currentType &y){
+	currentType i = x;
+	x = y;
+	y = i;
+}
 
